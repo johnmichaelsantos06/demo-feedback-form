@@ -4,6 +4,7 @@
 
 $(document).ready(function() {
 	$("#emoji-div").emoji({
+		width: '50px',
 		callback: function(event, value) {
 			$("#starsValue").val(value);
 		}
