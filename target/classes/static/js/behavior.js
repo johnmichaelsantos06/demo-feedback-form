@@ -29,7 +29,7 @@ $(document).ready(function() {
 						text: "Go",
 						closeModal: true,
 					},
-				}).then(function(email) {
+				}).then(function(data) {
 					location.reload();
 				});
 			});
