@@ -4,35 +4,32 @@
 		<meta charset="UTF-8">
 		<title>Demo Feedback Form</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link th:href="@{/css/reset.min.css}" rel="stylesheet"></link>
-		<link th:href="@{/css/style.css}" rel="stylesheet"></link>
+		<link th:href="@{/css/skeleton.css}" rel="stylesheet"></link>
+		<link th:href="@{/css/normalize.css}" rel="stylesheet"></link>
 		<script th:src="@{/js/sweetalert.min.js}" type="text/javascript"></script>
 		<script th:src="@{/js/jquery-3.6.0.min.js}" type="text/javascript"></script>
+		<script th:src="@{/js/emoji.js}" type="text/javascript"></script>
 		<script th:src="@{/js/behavior.js}" type="text/javascript"></script>
 	</head>
 	<body>
-		<form id="form">
-			<fieldset class="stars">
-				<input type="hidden" id="starsValue"/>
-				<input type="radio" name="stars" id="star1" ontouchstart="ontouchstart" /> 
-				<label class="fa fa-star" for="star1"></label>
-				<input type="radio" name="stars" id="star2" ontouchstart="ontouchstart" /> 
-				<label class="fa fa-star" for="star2"></label>
-				<input type="radio" name="stars" id="star3" ontouchstart="ontouchstart" /> 
-				<label class="fa fa-star" for="star3"></label>
-				<input type="radio" name="stars" id="star4" ontouchstart="ontouchstart" /> 
-				<label class="fa fa-star" for="star4"></label>
-				<input type="radio" name="stars" id="star5" ontouchstart="ontouchstart" /> 
-				<label class="fa fa-star" for="star5"></label> 
-				<label class="reset" for="star-reset" id="submitBtn">submit</label>
-			<figure class="face">
-					<i></i>
-					<i></i>
-					<u>
-						<div class="cover"></div>
-					</u>
-				</figure>
-			</fieldset>
-		</form>
+		<div id="container">
+			<div id="emoji-div" align="center"></div>
+			<form>
+				<div>
+					<input type="hidden" id="starsValue" value="3"/>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<label for="emailInput">Please enter your email to avail the promotion upon submitting your feedback</label> 
+						<input class="u-full-width" type="email" placeholder="test@mailbox.com" id="emailInput">
+					</div>
+				</div>
+				<div class="row">
+					<div class="twelve columns">
+						<input class="button-primary u-full-width" type="submit" value="Submit" id="submitBtn">
+					</div>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>
